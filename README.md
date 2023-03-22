@@ -2,12 +2,11 @@
 
 ## Introduction
 
+Now that we have established the knowledge and skills required to build out Tableau visualizations using one table from the Superstore Sales data set we can discuss adding nuance and complexity to your data story by including additional tables in our worksheets and visualizations. This is accomplished by customizing our Tableau **data source**. 
 
-Now that we have established the knowledge and skills required to build out Tableau visualizations using one table from the Superstore Sales data set we can discuss adding nuance and complexity to your data story by including additional tables in our worksheets and visualizations. This is accomplished by customizing our Tableau __data source__. 
+In Tableau, a data source is a bridge between Tableau and the underlying source data. Data sources can be from a single database or file and contain the connection information, metadata, and sheet/table/column names, as well as the relationships between them. Data sources can also be from disparate resources, like two different remote databases in which case Tableau would store and display the connection information, metadata, and sheet/table/column names for both databases in the Data Source. 
 
-In Tableau, a data source is the bridge between Tableau and the underlying source data. Data sources can be from a single database or file and contain the connection information, meta data, and sheet/table/column names, as well as the relationships between them. Data sources can also be from disparate resources, like two different remote databases in which case Tableau would store and display the connection information, meta data, and sheet/table/column names for both databases in the Data Source. 
-
-In this lesson, we will discuss what questions you should consider when planning a data source. Then, we will demonstrate the steps necessary to build a custom data source in Tableau. Along the way, we will learn more about essential components in the Tableau environment. 
+In this lesson, we will discuss what questions you should consider when planning a data source. Then, we will demonstrate the steps necessary to build a custom data source in Tableau. Along the way, we will learn more about essential components of the Tableau environment. 
 
 ## Learning Objectives
 
@@ -18,12 +17,12 @@ You will be able to:
 * Save and Publish to Tableau Public
 
 ### Planning a Data Source
-When planning a data source in Tableau, there are six essential considerations that should factor into your plan. Having a clear answer for each of the question groups below will set you up for success.
+When planning a data source in Tableau, six essential considerations should factor into your plan. Having a clear answer for each of the question groups below will set you up for success.
 
 #### 1. Where is my data located?
-These questions as you to think about __Data Location and Access__ and how this can impact how you manage your resources.
+These questions as you to think about **Data Location and Access** and how this can impact how you manage your resources.
 
-1. Is the data on premises or in the cloud?
+1. Is the data on the premises or in the cloud?
 > If your data is local do you want to embed it in the workbook?
 > If your data is in the cloud, do you have the necessary subscriptions and access permissions for all users?
 
@@ -36,36 +35,36 @@ These questions as you to think about __Data Location and Access__ and how this 
 > Are there any other anticipated obstacles to accessing this data, like problems with use agreements?
 
 #### 2. What shape is the data and how clean is it?
-These questions ask you to think about __Data Quality__ and how it can be managed and improved.
+These questions ask you to think about **Data Quality** and how it can be managed and improved.
 
 1. Do I need to transform the data before it can be used?
-> If you have wide format data, you may want to consider transforming it to long before building a relationship with that data.
-> You can also use __Swap__ in the __Command bar__ of your workspace to do this transformation!
+> If you have wide-format data, you may want to consider transforming it too long before building a relationship with that data.
+> You can also use **Swap** in the **Command bar** of your workspace to do this transformation!
 2. Do I need a pipeline or a way to clean the data before connecting different data sources? Can I do any of these transformations natively in Tableau?
 > Sometimes, you may want to perform certain transformations or exclude data before connecting to another data set to improve the success of unions or joins.
 
 #### 3. How can the data be combined?
-These questions ask you to think about your __Data Model__ or the structure of the links between your data sources.
+These questions ask you to think about your **Data Model** or the structure of the links between your data sources.
 
 1. Is my data spread across multiple systems? If so, what kind of links can I create?
-> For example, if you are working with two remote government databases from two separate agencies that both contain name and address data for individuals, you can create a relationship between those data sets using name and address fields the link?
+> For example, if you are working with two remote government databases from two separate agencies that both contain the name and address data for individuals, you can create a relationship between those data sets using the name and address fields in the link.
 2. Are there any existing links between my sources?
-> Imagine that you are connected to two different workbooks -- __Customer Accounts__ and __Customer Past Due Accounts__. It is likely, that __Customer Past Due Accounts__ was generated by filtering __Customer Accounts__ -- which means that links between them already exist -- the Customer and their balance due. 
+> Imagine that you are connected to two different workbooks -- **Customer Accounts** and **Customer Past Due Accounts**. It is likely, that **Customer Past Due Accounts** was generated by filtering **Customer Accounts** -- which means that links between them already exist -- the Customer and their balance due. 
 
 #### 4. Why does the user need the data?
-These questions ask you to think about your __User Experience__ and if you data source is improving or hindering the users' success. 
+These questions ask you to think about your **User Experience** and if your data source is improving or hindering the users' success. 
 1. Are the table and column names understandable?
-> You can make the data source more friendly for your end user by customizing table and column names for your use case when they are non existent or not informative.
+> You can make the data source more friendly for your end user by customizing table and column names for your use case when they are nonexistent or not informative.
 2. Does the organization of the data make sense for my use case? 
-> We can improve the usability of this data by removing irrelevant columns and merging relevant columns into better curated tables.
-3. Is the meta data informative?
+> We can improve the usability of this data by removing irrelevant columns and merging relevant columns into better-curated tables.
+3. Is the metadata informative?
 > If not, you might consider making it more robust to improve how informative your data source is.
 
 #### 5. Who should be accessing the data source?
-These questions ask you to think about __Scalability, Security, and Discoverability__ and how you can manage these three interests.
+These questions ask you to think about **Scalability, Security, and Discoverability** and how you can manage these three interests.
 1. How many people need to access the data source? (Scalability)
 > If you expect that the data source will have a high volume of requests from users, it is important to find out if your underlying data resources can meet those demands.
-> If you are unsure of the demands on your data source during production, do you have a plan to scale?
+> If you are unsure of the demands on your data source during production, do you have the plan to scale?
 2. Do all of my users have the necessary access permissions for the underlying resources? (Security)
 > How secure are the underlying resources? Will my data source undermine the security of these resources?
 > Do my end users have permission to access the underlying data source? Is it possible for them to get permission?
@@ -73,7 +72,7 @@ These questions ask you to think about __Scalability, Security, and Discoverabil
 > What will be the point of access for users? Can the people who need to find the data source find it easily?
 
 #### 6. When will my data be used and refreshed?
-These questions ask you to think about __Data Freshness and Resource Performance__ and how these will impact the quality of your data source.
+These questions ask you to think about **Data Freshness and Resource Performance** and how these will impact the quality of your data source.
 1. Should the data be a live connection or an extract?
 > If you want to stream data that will automatically refresh at the same time as the underlying data resource, go with a live connection. 
 > If that is not possible or if you prefer a static data source, consider how often it should be refreshed and who will refresh it.
@@ -87,7 +86,7 @@ These questions ask you to think about __Data Freshness and Resource Performance
 Now that we have discussed some of the most important considerations for planning a data source in Tableau, we will walk through the steps of creating a data source in Tableau with two different tables from the same database.
 
 <b>1. Create a new data source</b><br>
-> Launch Tableau and use the __Connect pane__ on the __Start page__ to open the __Superstore Sales data set__. This will launch the __Data Source page__.
+> Launch Tableau and use the **Connect pane** on the **Start page** to open the **Superstore Sales data set**. This will launch the **Data Source page**.
 <br>
 In the video below, we demonstrate step 1.
 <p>
@@ -101,11 +100,11 @@ In the video below, we demonstrate step 1.
 
 
 <b>2. Populate the Data Source page</b><br>
-> 1. Drag the `Orders` table from the __Data pane__ to the __canvas__. Then, drag the `Return` table to the canvas. Since the tables have an existing link (`OrderID`) a noodle appears to form an automatic relationship between the tables. 
+> 1. Drag the `Orders` table from the **Data pane** to the **canvas**. Then, drag the `Return` table to the canvas. Since the tables have an existing link (`OrderID`) a noodle appears to form an automatic relationship between the tables. 
 <br>
-> 2. If no automatic relationship was detected by Tableau, the __Edit Relationship__ dialog would open. Then, you can indicate which field should be used to relate the tables.
+> 2. If no automatic relationship was detected by Tableau, the **Edit Relationship** dialog would open. Then, you can indicate which field should be used to relate the tables.
 <br>
-> 3. For our purposes we will use two tables, but in the future you can use as many tables as needed.
+> 3. For our purposes, we will use two tables, but in the future, you can use as many tables as needed.
 <br>
 > In the video below, we demonstrate step 2.
 <p>
@@ -118,9 +117,9 @@ In the video below, we demonstrate step 1.
 </div>
 
 <b>3. Create a new worksheet</b><br>
-> 1. Select __Sheet 1__ from the Sheets tab. 
+> 1. Select **Sheet 1** from the Sheets tab. 
 <br>
-> 2. Then, double click the __Title box__ near the top of the Sheets pane (it will say 'Sheet 1') and rename it __'Returns by Product Sub-Category'__.
+> 2. Then, double click the **Title box** near the top of the Sheets pane (it will say 'Sheet 1') and rename it **'Returns by Product Sub-Category'**.
 <br>
 <br>
 
@@ -138,9 +137,9 @@ In the video below, we demonstrate step 1.
 <br>
     
 <b>5. Tidy up the worksheet</b>
-> 1. Navigate to the __Fit drop down menu__ on the __Command bar__ at the top of your screen. Select __Entire View__.
+> 1. Navigate to the **Fit Drop Down Menu** on the **Command bar** at the top of your screen. Select **Entire View**.
 <br>
-> 2. Then, drag `Returns.Returns (Count)` from the Data pane to the Marks card. Click the icon next to the pill on the Marks card and select label. 
+> 2. Then, drag `Returns. Returns (Count)` from the Data pane to the Marks card. Click the icon next to the pill on the Marks card and select the label. 
 <br>
 > In the video below, we demonstrate steps 3, 4, and 5.
 <p>
@@ -152,22 +151,22 @@ In the video below, we demonstrate step 1.
     </center>
 </div>
 
-<b>6. Great work! Now, let's save this workbook and the viz we created to Tableau public.</b><br>
-1. Click the __Save__ icon on the command bar. 
+<b>6. Great work! Now, let's save this workbook and the viz we created in Tableau public.</b><br>
+1. Click the **Save** icon on the command bar. 
 <br>
-2. Sign into Tableau Public if prompted. Keep in mind -- when you publish to Tableau Public anyone using Tableau Public can see it. There are other paid options available if you wish to save workbooks with sensitive data. 
+2. Sign in to Tableau Public if prompted. Keep in mind -- when you publish to Tableau Public anyone using Tableau Public can see it. 
 <br>
 3. Name your workbook `learn-wb-YYYY-MM-XX`, where YYYY = Current Year, MM = Current Month and XX = Your Initials.
 <p>
 <div>
     <center>
 <table><tr><td>
-<img src="https://curriculum-content.s3.amazonaws.com/data-science/images/images/tableau/lesson5/step5.png" alt="Image of the sheets tab in the lower left corner of the Tableau Data Source Page, with the Left Pane and Canvas visible." alt="This is the alt-text for the image." style="width: 700px;"/>
+<img src="https://curriculum-content.s3.amazonaws.com/data-science/images/images/tableau/lesson5/step5.png" alt="Image of the sheets tab in the lower-left corner of the Tableau Data Source Page, with the Left Pane and Canvas visible." alt="This is the alt-text for the image." style="width: 700px;"/>
 </td></tr></table>
     </center>
 </div>
 
 ## Summary
-In this lesson, we reviewed the essential questions one must consider when planning a data source in Tableau. Then, we walked through the steps to create a data source with multiple connections using the SuperStore Sales data set and created a link between the `Orders` and `Returns` table. Then, we created a visualization that communicates the amount of returns by sub-category. Finally, we saved and published our new workbook to Tableau Public.
+In this lesson, we reviewed the essential questions one must consider when planning a data source in Tableau. Then, we walked through the steps to create a data source with multiple connections using the SuperStore Sales data set and created a link between the `Orders` and `Returns` tables. Then, we created a visualization that communicates the number of returns by sub-category. Finally, we saved and published our new workbook to Tableau Public.
 
 In the next lesson, we are going to build on the foundation we created to generate some more complex visualizations in our workbook.
