@@ -93,7 +93,7 @@ In the video below, we demonstrate step 1.
 <div>
     <center>
 <table><tr><td>
-<video controls src = "https://curriculum-content.s3.amazonaws.com/data-science/images/images/tableau/lesson5/step1.mov" alt="This is the alt-text for the image." style="width: 700px;"/>
+<video controls src = "https://curriculum-content.s3.amazonaws.com/data-science/images/v3/tableau/tableau/3_custom_data_sources/step1.mov" alt="This is the alt-text for the image." style="width: 700px;"/>
 </td></tr></table>
     </center>
 </div>
@@ -111,7 +111,7 @@ In the video below, we demonstrate step 1.
 <div>
     <center>
 <table><tr><td>
-<video controls src = "https://curriculum-content.s3.amazonaws.com/data-science/images/images/tableau/lesson5/step2.mov" alt="This is the alt-text for the image." style="width: 700px;"/>
+<video controls src = "https://curriculum-content.s3.amazonaws.com/data-science/images/v3/tableau/tableau/3_custom_data_sources/step2.mov" alt="This is the alt-text for the image." style="width: 700px;"/>
 </td></tr></table>
     </center>
 </div>
@@ -146,7 +146,7 @@ In the video below, we demonstrate step 1.
 <div>
     <center>
 <table><tr><td>
-<video controls src = "https://curriculum-content.s3.amazonaws.com/data-science/images/images/tableau/lesson5/step3-4.mov" alt="This is the alt-text for the image." style="width: 700px;"/>
+<video controls src = "https://curriculum-content.s3.amazonaws.com/data-science/images/v3/tableau/tableau/3_custom_data_sources/step3-4.mov" alt="This is the alt-text for the image." style="width: 700px;"/>
 </td></tr></table>
     </center>
 </div>
@@ -161,7 +161,7 @@ In the video below, we demonstrate step 1.
 <div>
     <center>
 <table><tr><td>
-<img src="https://curriculum-content.s3.amazonaws.com/data-science/images/images/tableau/lesson5/step5.png" alt="Image of the sheets tab in the lower-left corner of the Tableau Data Source Page, with the Left Pane and Canvas visible." alt="This is the alt-text for the image." style="width: 700px;"/>
+<img src="https://curriculum-content.s3.amazonaws.com/data-science/images/v3/tableau/tableau/3_custom_data_sources/step5.png" alt="Image of the sheets tab in the lower-left corner of the Tableau Data Source Page, with the Left Pane and Canvas visible." alt="This is the alt-text for the image." style="width: 700px;"/>
 </td></tr></table>
     </center>
 </div>
